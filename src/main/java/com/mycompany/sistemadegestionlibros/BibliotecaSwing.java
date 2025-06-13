@@ -29,6 +29,8 @@ public class BibliotecaSwing extends JFrame {
     }
 
     private void initMongo() {
+        //Conectamos a la base de datos MongoDB
+        // Asegúrate de tener el servidor MongoDB corriendo en localhost:27017
         mongoClient = MongoClients.create("mongodb://localhost:27017");
         database = mongoClient.getDatabase("biblioteca");
         bucket = GridFSBuckets.create(database);
@@ -70,7 +72,7 @@ public class BibliotecaSwing extends JFrame {
             try (FileInputStream fis = new FileInputStream(archivo)) {
                 GridFSUploadOptions opciones = new GridFSUploadOptions()
                         .metadata(new Document("titulo", titulo)
-                                          .append("autor", autor));
+                                .append("autor", autor));
 
                 bucket.uploadFromStream(nombreArchivo, fis, opciones);
                 modeloLista.addElement(nombreArchivo);
