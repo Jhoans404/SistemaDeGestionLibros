@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.sistemadegestionlibros;
 
-/**
- *
- * @author JHOANS
- */
 import com.mongodb.client.*;
 import com.mongodb.client.gridfs.*;
 import com.mongodb.client.gridfs.model.*;
@@ -17,7 +9,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.util.ArrayList;
 
 public class BibliotecaSwing extends JFrame {
 
@@ -50,13 +41,16 @@ public class BibliotecaSwing extends JFrame {
 
         JButton btnSubir = new JButton("Subir Libro PDF");
         JButton btnAbrir = new JButton("Abrir Libro");
+        JButton btnEliminar = new JButton("Eliminar Libro");
 
         btnSubir.addActionListener(e -> subirLibro());
         btnAbrir.addActionListener(e -> abrirLibroSeleccionado());
+        btnEliminar.addActionListener(e -> eliminarLibroSeleccionado());
 
         JPanel botones = new JPanel();
         botones.add(btnSubir);
         botones.add(btnAbrir);
+        botones.add(btnEliminar);
 
         add(scroll, BorderLayout.CENTER);
         add(botones, BorderLayout.SOUTH);
@@ -114,6 +108,31 @@ public class BibliotecaSwing extends JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this, "Error al abrir el libro.");
+        }
+    }
+
+    private void eliminarLibroSeleccionado() {
+        String nombre = listaLibros.getSelectedValue();
+        if (nombre == null) {
+            JOptionPane.showMessageDialog(this, "Selecciona un libro de la lista.");
+            return;
+        }
+
+        int confirmacion = JOptionPane.showConfirmDialog(this,
+                "¿Estás seguro de que deseas eliminar el libro \"" + nombre + "\"?",
+                "Confirmar eliminación", JOptionPane.YES_NO_OPTION);
+
+        if (confirmacion == JOptionPane.YES_OPTION) {
+            GridFSFindIterable archivos = bucket.find(new Document("filename", nombre));
+            GridFSFile archivo = archivos.first();
+
+            if (archivo != null) {
+                bucket.delete(archivo.getObjectId());
+                modeloLista.removeElement(nombre);
+                JOptionPane.showMessageDialog(this, "Libro eliminado exitosamente.");
+            } else {
+                JOptionPane.showMessageDialog(this, "No se encontró el libro en la base de datos.");
+            }
         }
     }
 
