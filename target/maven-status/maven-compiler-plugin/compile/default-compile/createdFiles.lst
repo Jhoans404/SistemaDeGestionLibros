@@ -1,3 +1,2 @@
-com\gestionlibros\interfaz\Login.class
-com\gestionlibros\interfaz\Login$1.class
-com\mycompany\sistemadegestionlibros\BibliotecaSwing.class
+com\gestionlibros\interfaz\LoginController.class
+com\gestionlibros\interfaz\Main.class

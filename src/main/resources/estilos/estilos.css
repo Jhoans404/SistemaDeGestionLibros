@@ -1,0 +1,41 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 24 jun. 2025, 10:44:34 a. m.
+    Author     : JHOANS
+*/
+
+.usuarioLabel{
+    -fx-background-radius: 10;
+    
+}
+
+.contrasenaLogin{
+    -fx-background-radius: 10;
+}
+
+.recuerdaLogin{
+    -fx-background-radius: 10;
+}
+
+.entrarLogin{
+    -fx-background-radius: 10;
+}
+
+.styleSalir{
+    -fx-background-color:  #572C0C;
+}
+
+.styleMax{
+    -fx-background-color:  #572C0C;
+}
+
+.styleMin{
+    -fx-background-color:  #572C0C;
+}
+
+.styleSalir:hover{
+    -fx-background-color:  red;
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="477.0" prefWidth="730.0" stylesheets="@../../../estilos/estilos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionlibros.interfaz.LoginController">
+  <children>
+    <AnchorPane fx:id="panelLogin" maxHeight="-1.0" maxWidth="-1.0" prefHeight="501.0" prefWidth="742.0" VBox.vgrow="ALWAYS">
+         <children>
+          <MenuBar />
+            <Pane layoutY="26.0" prefHeight="451.0" prefWidth="730.0" style="-fx-background-color: #FEF2DA;" stylesheets="@../../../estilos/estilos.css">
+               <children>
+                  <Label layoutX="262.0" layoutY="40.0" prefHeight="41.0" prefWidth="206.0" text="INICIAR SESIÓN" textFill="#552d13">
+                     <font>
+                        <Font name="Hack Nerd Font Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" layoutX="234.0" layoutY="172.0" prefHeight="30.0" prefWidth="263.0" promptText="Contraseña" style="-fx-background-color: #FEF2DA;" styleClass="contrasenaLogin">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </PasswordField>
+                  <TextField fx:id="nombreUsuario" layoutX="234.0" layoutY="117.0" prefHeight="30.0" prefWidth="263.0" promptText=" Nombre de usuario" style="-fx-background-color: #FEF2DA;" styleClass="usuarioLabel">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
+                  <CheckBox layoutX="234.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnRecuerdame" styleClass="recuerdaLogin" text="Recuerdame" />
+                  <Button layoutX="236.0" layoutY="273.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="263.0" style="-fx-background-color: #572C0C;" styleClass="entrarLogin" text="Entrar" textFill="WHITE" />
+                  <Button layoutX="303.0" layoutY="317.0" mnemonicParsing="false" onAction="#btnCrearCuenta" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #FEF2DC;" text="Crear cuenta nueva" textFill="#5a492f">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></Button>
+                  <Line endX="66.80001831054688" endY="-6.79998779296875" layoutX="351.0" layoutY="345.0" startX="-38.600006103515625" startY="-6.79998779296875" />
+               </children>
+               <effect>
+                  <ColorAdjust />
+               </effect></Pane>
+            <Pane layoutY="-1.0" prefHeight="30.0" prefWidth="730.0" style="-fx-background-color: #572C0C;" stylesheets="@../../../estilos/estilos.css">
+               <children>
+                  <Button fx:id="btSalir" layoutX="697.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#clickSalir" prefHeight="25.0" prefWidth="33.0" styleClass="styleSalir" text="x" />
+                  <Button layoutX="664.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" styleClass="styleMax" />
+                  <Button fx:id="btnMinimizar" layoutX="631.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimizarVentana" prefHeight="25.0" prefWidth="33.0" styleClass="styleMin" text="-" />
+                  <Label layoutX="343.0" layoutY="6.0" text="BookBin" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

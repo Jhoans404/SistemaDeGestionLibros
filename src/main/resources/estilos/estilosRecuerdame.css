@@ -1,0 +1,24 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 24 jun. 2025, 6:13:29 p. m.
+    Author     : JHOANS
+*/
+
+.labelTitulo{
+    -fx-text-fill: write; 
+    -fx-font-size: 12px;   
+}
+
+.labelElige{
+    -fx-text-fill: #552d13;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Hack Nerd Font";
+}
+
+.maxRecuerdame:hover{
+    -fx-background-color: #f2f2f2;
+}
