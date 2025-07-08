@@ -38,6 +38,12 @@ public class LoginController implements Initializable {
         // Código para cerrar la app, por ejemplo:
         Platform.exit();
     }
+    
+    @FXML
+    private void actionEntrar(ActionEvent event){
+        ConexionMongo conex = new ConexionMongo();
+        conex.conectar();
+    }
 
     @FXML
     private void minimizarVentana(ActionEvent event) {

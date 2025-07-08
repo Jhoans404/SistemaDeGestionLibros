@@ -34,6 +34,12 @@
             <artifactId>charm-glisten</artifactId>
             <version>6.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.11.0</version> <!-- o la última versión estable -->
+        </dependency>
+
 
     </dependencies>
     

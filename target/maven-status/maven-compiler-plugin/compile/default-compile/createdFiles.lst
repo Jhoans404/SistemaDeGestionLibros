@@ -1,2 +1,3 @@
 com\gestionlibros\interfaz\LoginController.class
 com\gestionlibros\interfaz\Main.class
+com\gestionlibros\interfaz\ConexionMongo.class

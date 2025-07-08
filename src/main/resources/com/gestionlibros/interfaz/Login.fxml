@@ -69,7 +69,7 @@
                      </effect>
                   </TextField>
                   <CheckBox layoutX="234.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnRecuerdame" styleClass="recuerdaLogin" text="Recuerdame" />
-                  <Button layoutX="236.0" layoutY="273.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="263.0" style="-fx-background-color: #572C0C;" styleClass="entrarLogin" text="Entrar" textFill="WHITE" />
+                  <Button fx:id="btnEntrar" layoutX="236.0" layoutY="273.0" mnemonicParsing="false" onAction="#actionEntrar" prefHeight="30.0" prefWidth="263.0" style="-fx-background-color: #572C0C;" styleClass="entrarLogin" text="Entrar" textFill="WHITE" />
                   <Button layoutX="303.0" layoutY="317.0" mnemonicParsing="false" onAction="#btnCrearCuenta" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #FEF2DC;" text="Crear cuenta nueva" textFill="#5a492f">
                      <font>
                         <Font name="Arial" size="12.0" />
